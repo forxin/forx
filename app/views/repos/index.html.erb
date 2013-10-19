@@ -1,0 +1,9 @@
+<% @repositories.each do |repo| %>
+  <div class="repository"
+       data-name="<%= repo.name %>"
+       data-url="<%= repo.url %>"
+       data-user-avatar="<%= repo.user_avatar %>"
+       data-username="<%= repo.username %>"
+       data-score="<%= repo.score %>">
+  </div>
+<% end %>
