@@ -1,19 +1,18 @@
-<div style="position: relative;" id = "repocontainer"> <!-- container -->
+<div style="position : relative; margin-top:15px" id = "repocontainer"> <!--container -->
 
   <% @repositories.each do |repo| %>
     <div class="repository" data-score="<%= repo.score %>">
-      <p><%= repo.name %></p>
+      <!--<p><%= repo.name %></p>-->
       <%# Other properties available: %>
       <%#  * repo.url %>
       <%#  * repo.user_avatar %>
       <%#  * repo.username %>
 	   <div class = "shadow"></div>
-	 
-    
+	     
   </div>
 	
   <% end %>
-
-</div> <!-- /container -->
+</div>
+ <!-- /container -->
 
 <script> draw() </script>

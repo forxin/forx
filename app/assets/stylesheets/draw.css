@@ -16,11 +16,9 @@
     -moz-border-radius: 999px;
     border-radius: 999px; 
 		
-	
+	transition: padding .3s, bottom .3s;
 	box-shadow: inset -10px -30px rgba(0,0,0,.06);
-	width : 200px;
-	height : 200px;
-	background-color:cadetblue;
+    background-color:cadetblue;
 }
 
 .downanimation{
@@ -69,7 +67,7 @@
 	transform-origin:center bottom;
 	
 	transition: padding .3s, bottom .3s;
-}
+}*/
 
 @-webkit-keyframes leftanimation { 
 	33%{ -webkit-transform:rotate(-10deg); } 
