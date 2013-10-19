@@ -1,11 +1,15 @@
-<% @repositories.each do |repo| %>
-  <div class="repository"
-       data-name="<%= repo.name %>"
-       data-url="<%= repo.url %>"
-       data-user-avatar="<%= repo.user_avatar %>"
-       data-username="<%= repo.username %>"
-       data-score="<%= repo.score %>">
-  </div>
+<div style="background-color: yellow;"> <!-- container -->
 
-<% end %>
-  <script> draw() </script>
+  <% @repositories.each do |repo| %>
+    <div class="repository" data-score="<%= repo.score %>">
+      <p><%= repo.name %></p>
+      <%# Other properties available: %>
+      <%#  * repo.url %>
+      <%#  * repo.user_avatar %>
+      <%#  * repo.username %>
+    </div>
+  <% end %>
+
+</div> <!-- /container -->
+
+<script> draw() </script>
