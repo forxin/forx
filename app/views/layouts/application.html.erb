@@ -19,13 +19,34 @@
     <![endif]-->
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="https://raw.github.com/layervault/jquery.typer.js/master/src/jquery.typer.js"></script>
 
     <%= csrf_meta_tags %>
   </head>
 
   <body>
 
-    <%= yield %>
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="page-header">
+          <h1>forx</h1>
+        </div>
+
+        <div class="page-content">
+          <%= yield %>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit"><small>forx was built by <a href="http://github.com/kseniiaPelykh">Kseniia Pelykh</a>, <a href="http://github.com/as-cii">Antonio Scandurra</a> and <a href="http://github.com/exalted">Ali Servet Donmez</a> for Rails Rumble, 2013. <a href="mailto:team@forxin.mygbiz.com">Want to get in touch?</a></small></p>
+      </div>
+    </div>
 
   </body>
 
