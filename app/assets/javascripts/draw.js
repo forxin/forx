@@ -22,14 +22,14 @@ function draw()
 			if (maxRadius < radius[i]) { maxRadius = radius[i]}
 		}
 		
-		maxDistanse = maxRadius + radius[0];
+		maxDistanse = maxRadius + radius[0] + 30;
 		
 		//var offset = $('#repocontainer').offset();
-		//$('#repocontainer').css({"height": (maxRadius * 2 + radius[0] + 10)*2 });
-		centerX = maxDistanse + 40;
-		centerY = maxDistanse + 40;
-		x[0] = maxDistanse + 40;
-		y[0] = maxDistanse + 40;
+		$('#repocontainer').css({"height": (maxRadius * 2 + radius[0] + 30)*2 });
+		centerX = maxDistanse + maxRadius;
+		centerY = maxDistanse + maxRadius;
+		x[0] = maxDistanse + maxRadius;
+		y[0] = maxDistanse + maxRadius;
 		
 		u = Math.PI;
 		a = Math.PI * 2 / (count - 1);
