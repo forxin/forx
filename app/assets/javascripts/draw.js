@@ -1,13 +1,25 @@
 function draw(count)
 {
-	var centerX = 300;
-	var centerY = 300;
-	
-	var maxDistanse = 100;
-	var u = Math.PI;
-	var a = Math.PI * 2 / count;
+	var centerX = 500;
+	var centerY = 200;
+	var maxDistanse = 200; 
+	var u;
+	var a;
+	var radius = new Array();
 	var x = new Array();
 	var y = new Array();
+	
+	/*
+	for (i=0; i < count; i++) {
+		radius[i] = rating[i] + 100;
+		}
+	
+	maxDistanse = Math.max.apply(Math, radius) + 50;
+		
+		*/
+	
+	u = Math.PI;
+	a = Math.PI * 2 / count;
 	
 	for (i=0; i< count; i++)
 	{
@@ -16,8 +28,8 @@ function draw(count)
 		u = u + a;
 	}
 	
-	$('.repository').addClass('circle animated bounceInUp')
 	$('.repository').each(function( index ) { 
-	($(this).css( {"position":"absolute","left":x[index],"top":y[index],"background-color":"red","width":"50px","height":"50px"}))
+	($(this).css( {"position":"absolute","left":x[index],"top":y[index],"background-color":"cadetblue","width":"100px","height":"100px"}))//color, width, height need to change
 	});
 }
+

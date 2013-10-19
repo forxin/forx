@@ -1,9 +1,39 @@
-.maincircle{
-
+.mainrepository{
+	
 }
 
-.circle{
+.repository{
 	-webkit-border-radius: 999px;
     -moz-border-radius: 999px;
     border-radius: 999px; 
+		
+	-webkit-animation: moverepository 5s ease-in-out infinite;
+	-moz-animation: moverepository 5s ease-in-out infinite;
+	animation : moverepository 5s ease-in-out infinite;
+	
+	-webkit-transform-origin: center bottom;
+	-moz-transform-origin: center bottom;
+	transform-origin:center bottom;
+	
+	box-shadow: inset -10px -30px rgba(0,0,0,.06);
+	transition: padding .3s, bottom .3s;
+	width : 200px;
+	height : 200px;
+	background-color:cadetblue;
 }
+
+.firstanimation{
+
+}
+
+.secondanimation{
+
+}
+
+.thirdanimation{
+
+}
+
+@-webkit-keyframes moverepository { 33%{ -webkit-transform:rotate(5deg); } 66%{ -webkit-transform:rotate(-5deg); } }
+@keyframes moverepostiroy {33%{ transform:rotate(5deg); } 66%{ transform:rotate(-5deg); }}
+
