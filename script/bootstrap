@@ -5,4 +5,4 @@ set -o nounset
 
 cd "$(dirname $0)/.."
 
-bundle install --binstubs
+bundle install --binstubs --without=production
