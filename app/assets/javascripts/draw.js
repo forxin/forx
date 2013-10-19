@@ -22,12 +22,13 @@ function draw()
 			if (maxRadius < rating[i]) { maxRadius = rating[i]}
 		}
 	
-		maxDistanse = $(window).scrollTop() + $(window).height() / 2 - maxRadius;
+		maxDistanse = maxRadius + rating[0] + 10;
 		console.log(maxDistanse);
 		console.log(maxRadius);
 		
-		var centerX = $(window).width() / 2 - radius[0]; 
-		var centerY = $(window).scrollTop() + $(window).height() / 2;
+		var centerX = maxDistanse; 
+		var centerY = maxDistanse;
+		
 		x[0] = centerX;
 		y[0] = centerY;
 		
@@ -43,7 +44,6 @@ function draw()
 	
 		$('.repository').each(function( index ) { 
 		($(this).css( {"position":"absolute","left":x[index],"top":y[index],"background-color":"cadetblue","width":radius[index]*2,"height":radius[index]*2}))//color need to change
-		//console.log(index);
 		if (index % 4 == 0) {$(this).addClass("upanimation")}; 
 		if (index % 4 == 1) {$(this).addClass("downanimation")};
 		if (index % 4 == 2) {$(this).addClass("leftanimation")};
