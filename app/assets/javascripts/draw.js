@@ -19,13 +19,13 @@ function draw()
 		}
 	
 		for (i=1; i<count; i++){
-			if (maxRadius < rating[i]) { maxRadius = rating[i]}
+			if (maxRadius < radius[i]) { maxRadius = radius[i]}
 		}
 	
 		maxDistanse = maxRadius + radius[0] + 10;
 		console.log(maxDistanse);
 		console.log(maxRadius);
-		
+		$('#repocontainer').css({"height": (maxRadius * 2 + radius[0] + 10)*2 });
 		var centerX = maxDistanse; 
 		var centerY = maxDistanse;
 		
@@ -49,8 +49,6 @@ function draw()
 		if (index % 4 == 2) {$(this).addClass("leftanimation")};
 		if (index % 4 == 3) {$(this).addClass("rightanimation")};
 		});
-		
-		//$('.shadow').css({"width":"60%","position":"relative"});
 		
 	})
 }
