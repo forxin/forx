@@ -7,33 +7,103 @@
     -moz-border-radius: 999px;
     border-radius: 999px; 
 		
-	-webkit-animation: moverepository 5s ease-in-out infinite;
-	-moz-animation: moverepository 5s ease-in-out infinite;
-	animation : moverepository 5s ease-in-out infinite;
-	
-	-webkit-transform-origin: center bottom;
-	-moz-transform-origin: center bottom;
-	transform-origin:center bottom;
 	
 	box-shadow: inset -10px -30px rgba(0,0,0,.06);
-	transition: padding .3s, bottom .3s;
 	width : 200px;
 	height : 200px;
 	background-color:cadetblue;
 }
 
-.firstanimation{
-
+.downanimation{
+	-webkit-animation: downanimation 5s ease-in-out infinite;
+	-moz-animation: downanimation 5s ease-in-out infinite;
+	animation : downanimation 5s ease-in-out infinite;
+	
+	-webkit-transform-origin: center bottom;
+	-moz-transform-origin: center bottom;
+	transform-origin:center bottom;
+	
+	transition: padding .3s, bottom .3s;
 }
 
-.secondanimation{
-
+.upanimation{
+	-webkit-animation: upanimation 2s linear infinite;
+	-moz-animation: upanimation 2s linear infinite;
+	animation : upanimation 2s linear infinite;
+	
+	-webkit-transform-origin: center bottom;
+	-moz-transform-origin: center bottom;
+	transform-origin:center bottom;
+	
+	transition: padding .3s, bottom .3s;
 }
 
-.thirdanimation{
-
+.leftanimation{
+	-webkit-animation: leftanimation 2s linear infinite;
+	-moz-animation: leftanimation 2s linear infinite;
+	animation : leftanimation 2s linear infinite;
+	
+	-webkit-transform-origin: center bottom;
+	-moz-transform-origin: center bottom;
+	transform-origin:center bottom;
+	
+	transition: padding .3s, bottom .3s;
 }
 
-@-webkit-keyframes moverepository { 33%{ -webkit-transform:rotate(5deg); } 66%{ -webkit-transform:rotate(-5deg); } }
-@keyframes moverepostiroy {33%{ transform:rotate(5deg); } 66%{ transform:rotate(-5deg); }}
+.rightanimation{
+	-webkit-animation: rightanimation 2s linear infinite;
+	-moz-animation: rightanimation 2s linear infinite;
+	animation : rightanimation 2s linear infinite;
+	
+	-webkit-transform-origin: center bottom;
+	-moz-transform-origin: center bottom;
+	transform-origin:center bottom;
+	
+	transition: padding .3s, bottom .3s;
+}
+
+@-webkit-keyframes leftanimation { 
+	33%{ -webkit-transform:rotate(-10deg); } 
+	66%{ -webkit-transform:rotate(10deg); } 
+}
+
+@keyframes leftanimation {
+	33%{ transform:rotate(-10deg); }
+	66%{ transform:rotate(10deg); }
+}
+
+@-webkit-keyframes downanimation {
+	33%{  margin-top:5px; } 
+	66%{ margin-top:0px;}
+}
+
+@keyframes downanimation {
+	33%{ margin-top:5px;}
+	66%{ margin-top:0px; }
+}
+
+@-webkit-keyframes upanimation{
+	33%{  margin-top:-5px; } 
+	66%{ margin-top:0px;}
+}
+
+@keyframes upanimation {
+	33%{ margin-top:-5px;}
+	66%{ margin-top:0px; }
+}
+
+@-webkit-keyframes rightanimation { 
+	33%{ -webkit-transform:rotate(10deg); } 
+	66%{ -webkit-transform:rotate(-10deg); } 
+}
+
+@keyframes rightanimation {
+	33%{ transform:rotate(10deg); }
+	66%{ transform:rotate(-10deg); }
+}
+
+
+
+
+
 
