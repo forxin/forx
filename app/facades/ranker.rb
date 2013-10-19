@@ -1,9 +1,13 @@
 class Ranker
   def self.rate_repos(*repositories)
     total = 0
-    repositories.each.map do |repo|
+
+    repositories
+    .reject { |repo| repo.stargazers < 3 }
+    .each.map do |repo|
       score = self.repo_score(repo.stargazers, days_since_now(repo.last_commit_on),
-        days_since_now(repo.last_issue_closed_on))
+                              days_since_now(repo.last_issue_closed_on))
+
       total += score
       Repository.new(repo.name, repo.url, repo.user_avatar, repo.username, score)
     end.each do |repo|
