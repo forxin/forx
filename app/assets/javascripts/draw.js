@@ -22,7 +22,7 @@ function draw()
 			if (maxRadius < rating[i]) { maxRadius = rating[i]}
 		}
 	
-		maxDistanse = maxRadius + rating[0] + 10;
+		maxDistanse = maxRadius + radius[0] + 10;
 		console.log(maxDistanse);
 		console.log(maxRadius);
 		
@@ -49,5 +49,8 @@ function draw()
 		if (index % 4 == 2) {$(this).addClass("leftanimation")};
 		if (index % 4 == 3) {$(this).addClass("rightanimation")};
 		});
+		
+		//$('.shadow').css({"width":"60%","position":"relative"});
+		
 	})
 }
