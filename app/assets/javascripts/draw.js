@@ -39,11 +39,13 @@ function draw()
 			x[i] = centerX+maxDistanse*Math.cos(u);
 			y[i] = centerY+maxDistanse*Math.sin(u);
 			u = u + a;
-	
 		}
 	
 		$('.repository').each(function( index ) { 
-		($(this).css( {"position":"absolute","left":x[index]-radius[index],"top":y[index]-radius[index],"background-color":"cadetblue","width":radius[index]*2,"height":radius[index]*2}))//color need to change
+		var imageUrl = ($(this).attr('user-avatar'));
+		console.log(imageUrl);
+		($(this).css( {"position":"absolute","left":x[index]-radius[index],"top":y[index]-radius[index],"width":radius[index]*2,"height":radius[index]*2}))//color need to change
+		$(this).css('background-image', 'url(' + imageUrl + ')');
 		if (index % 4 == 0) {$(this).addClass("upanimation")}; 
 		if (index % 4 == 1) {$(this).addClass("downanimation")};
 		if (index % 4 == 2) {$(this).addClass("leftanimation")};
