@@ -46,39 +46,6 @@
 	transition: padding .3s, bottom .3s;
 }
 
-.leftanimation{
-	-webkit-animation: leftanimation 2s linear infinite;
-	-moz-animation: leftanimation 2s linear infinite;
-	animation : leftanimation 2s linear infinite;
-	
-	-webkit-transform-origin: center bottom;
-	-moz-transform-origin: center bottom;
-	transform-origin:center bottom;
-	
-	transition: padding .3s, bottom .3s;
-}
-
-.rightanimation{
-	-webkit-animation: rightanimation 2s linear infinite;
-	-moz-animation: rightanimation 2s linear infinite;
-	animation : rightanimation 2s linear infinite;
-	
-	-webkit-transform-origin: center bottom;
-	-moz-transform-origin: center bottom;
-	transform-origin:center bottom;
-	
-	transition: padding .3s, bottom .3s;
-}
-
-@-webkit-keyframes leftanimation { 
-	33%{ -webkit-transform:rotate(-10deg); } 
-	66%{ -webkit-transform:rotate(10deg); } 
-}
-
-@keyframes leftanimation {
-	33%{ transform:rotate(-10deg); }
-	66%{ transform:rotate(10deg); }
-}
 
 @-webkit-keyframes downanimation {
 	33%{  margin-top:5px; } 
@@ -110,6 +77,14 @@
 	66%{ transform:rotate(-10deg); }
 }
 
+.repository:nth-child(5n+0) {
+	-webkit-animation-delay:0s;
+}
+
+.circlecontent:nth-child(5) repository{
+	-webkit-animation-delay:1s;
+	animation-delay:1s;
+}
 
 
 
