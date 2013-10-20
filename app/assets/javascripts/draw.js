@@ -76,7 +76,7 @@ $(document).ready(function(){
 		$(this).removeClass("blur");
 		if (index % 2 == 1) {$(this).addClass("moreupanimation")};
 		if (index % 2 == 0) {$(this).addClass("upanimation")};
-	});	
+	});
 	$(".circle").click(function() {
 		var repo = $(this).data("repo");
 		window.open('https://github.com/' + repo, '_blank');

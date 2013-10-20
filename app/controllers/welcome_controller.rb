@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
     if user.present? && repo.present?
       redirect_to repo_path(user, repo)
     else
-      flash[:alert] = "You cannot forx a repository with that name!"
+      flash[:danger] = "Is that even a repository? Try again."
       render :index
     end
   end
