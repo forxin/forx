@@ -1,14 +1,19 @@
 .shadow{
+	width: 80%;
 	height: 20px;
 	background: rgba(0,0,0,.1);
 	position:absolute;
 	border-radius: 100%;
-	margin: -15px 0 0 30%;
-	transition: .3s;
-	bottom:0;
+	margin-left: 13%;
+	-webkit-animation: shadowanimation 2s linear infinite;
+	-moz-animation: shadowanimation 2s linear infinite;
+	animation : shadowanimation 2s linear infinite;
 }
+
 .mainrepository{
-	
+	position: absolute;
+	left : 50%;
+	top : 50%;
 }
 
 .repository{
@@ -20,18 +25,11 @@
 	background-position:center;
 	background-size:100% 100%;
 }
-
-
-.downanimation{
-	-webkit-animation: downanimation 5s ease-in-out infinite;
-	-moz-animation: downanimation 5s ease-in-out infinite;
-	animation : downanimation 5s ease-in-out infinite;
-	
-	-webkit-transform-origin: center bottom;
-	-moz-transform-origin: center bottom;
-	transform-origin:center bottom;
-	
-	transition: padding .3s, bottom .3s;
+.shadowanimation
+{
+	-webkit-animation: shadowanimation 2s linear infinite;
+	-moz-animation: shadowanimation 2s linear infinite;
+	animation : shadowanimation 2s linear infinite;
 }
 
 .upanimation{
@@ -46,10 +44,10 @@
 	transition: padding .3s, bottom .3s;
 }
 
-.leftanimation{
-	-webkit-animation: leftanimation 2s linear infinite;
-	-moz-animation: leftanimation 2s linear infinite;
-	animation : leftanimation 2s linear infinite;
+.moreupanimation{
+	-webkit-animation: moreupanimation 4s linear infinite;
+	-moz-animation: moreupanimation 4s linear infinite;
+	animation : moreupanimation 4s linear infinite;
 	
 	-webkit-transform-origin: center bottom;
 	-moz-transform-origin: center bottom;
@@ -58,35 +56,13 @@
 	transition: padding .3s, bottom .3s;
 }
 
-.rightanimation{
-	-webkit-animation: rightanimation 2s linear infinite;
-	-moz-animation: rightanimation 2s linear infinite;
-	animation : rightanimation 2s linear infinite;
-	
-	-webkit-transform-origin: center bottom;
-	-moz-transform-origin: center bottom;
-	transform-origin:center bottom;
-	
-	transition: padding .3s, bottom .3s;
-}
-
-@-webkit-keyframes leftanimation { 
-	33%{ -webkit-transform:rotate(-10deg); } 
-	66%{ -webkit-transform:rotate(10deg); } 
-}
-
-@keyframes leftanimation {
-	33%{ transform:rotate(-10deg); }
-	66%{ transform:rotate(10deg); }
-}
-
-@-webkit-keyframes downanimation {
-	33%{  margin-top:5px; } 
+@-webkit-keyframes moreupanimation{
+	33%{  margin-top:-10px; } 
 	66%{ margin-top:0px;}
 }
 
-@keyframes downanimation {
-	33%{ margin-top:5px;}
+@keyframes moreupanimation {
+	33%{ margin-top:-10px;}
 	66%{ margin-top:0px; }
 }
 
@@ -100,18 +76,60 @@
 	66%{ margin-top:0px; }
 }
 
-@-webkit-keyframes rightanimation { 
-	33%{ -webkit-transform:rotate(10deg); } 
-	66%{ -webkit-transform:rotate(-10deg); } 
+@-webkit-keyframes shadowanimation { 
+	33%{ width:70%; margin-left:18% } 
+	66%{ width: 80%; margin-left:13% } 
 }
 
-@keyframes rightanimation {
-	33%{ transform:rotate(10deg); }
-	66%{ transform:rotate(-10deg); }
+@keyframes shadowanimation {
+	33%{ width:70%; margin-left:18%}
+	66%{ width:80%; margin-left:13%}
+}
+.circlecontent:nth-child(5n+0) .repository{
+	-webkit-animation-delay:100ms;
+	animation-delay:1s;
 }
 
+.circlecontent:nth-child(5n+1) .repository{
+	-webkit-animation-delay:1s;
+	animation-delay:1s;
+}
 
+.circlecontent:nth-child(5n+2) .repository{
+	-webkit-animation-delay:500ms;
+	animation-delay:1s;
+}
+.circlecontent:nth-child(5n+3) .repository{
+	-webkit-animation-delay:0s;
+	animation-delay:1s;
+}
+.circlecontent:nth-child(5n+4) .repository{
+	-webkit-animation-delay:1700ms;
+	animation-delay:1s;
+}
 
+.circlecontent:nth-child(5n+0) .shadow{
+	-webkit-animation-delay:100ms;
+	animation-delay:1s;
+}
+
+.circlecontent:nth-child(5n+1) .shadow{
+	-webkit-animation-delay:1s;
+	animation-delay:1s;
+}
+
+.circlecontent:nth-child(5n+2) .shadow{
+	-webkit-animation-delay:500ms;
+	animation-delay:1s;
+}
+.circlecontent:nth-child(5n+3) .shadow{
+	-webkit-animation-delay:0s;
+	animation-delay:1s;
+}
+.circlecontent:nth-child(5n+4) .shadow{
+	-webkit-animation-delay:1700ms;
+	animation-delay:1s;
+}
 
 
 
