@@ -63,3 +63,13 @@ function draw()
 		
 	})
 }
+
+$(document).ready(function(){
+	$(".repository").hover(function(){
+		$(this).animate({ width: "+=50px", height: "+=50" });
+		$(this).addClass("blur");
+	}, function() {
+		$(this).animate({ width: "-=50px", height: "-=50" });
+		$(this).removeClass("blur");
+});	
+});
