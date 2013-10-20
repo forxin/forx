@@ -43,12 +43,6 @@
 	animation : moreupanimation 4s ease-in-out infinite;
 }
 
-.blur{
-	-webkit-filter:blur(2px);
-	-o-filter:blur(2px);
-	filter:blur(2px);
-}
-
 @-webkit-keyframes moreupanimation{
 	33%{  margin-top:-10px; } 
 	66%{ margin-top:0px;}
