@@ -65,11 +65,19 @@ function draw()
 }
 
 $(document).ready(function(){
-	$(".repository").hover(function(){
+	$(".repository").hover(function(index){
 		$(this).animate({ width: "+=50px", height: "+=50" });
 		$(this).addClass("blur");
-	}, function() {
+		if (index % 2 == 1) {$(this).removeClass("moreupanimation")};
+		if (index % 2 == 0) {$(this).removeClass("upanimation")};
+	}, function(index) {
 		$(this).animate({ width: "-=50px", height: "-=50" });
 		$(this).removeClass("blur");
-});	
+		if (index % 2 == 1) {$(this).addClass("moreupanimation")};
+		if (index % 2 == 0) {$(this).addClass("upanimation")};
+	});	
+	$(".circle").click(function() {
+		var repo = $(this).data("repo");
+		window.open('https://github.com/' + repo, '_blank');
+	});
 });
