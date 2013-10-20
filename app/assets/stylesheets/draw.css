@@ -6,6 +6,10 @@
 	border-radius: 100%;
 	margin-left: 13%;
 }
+/*.repository:hover{
+	-webkit-animation-play-state: paused;
+	animation-play-state:paused;
+}*/
 
 .shadowupanimation{
 	-webkit-animation: shadowupanimation 2s ease-in-out infinite;
@@ -42,6 +46,16 @@
 	-moz-animation: moreupanimation 4s ease-in-out infinite;
 	animation : moreupanimation 4s ease-in-out infinite;
 }
+	
+.circle .percentage {
+	display: none;
+}
+.circle.display-percentage .percentage {
+	display: block;
+	z-index: 99998;
+	font-size:xx-large;
+}
+
 
 @-webkit-keyframes moreupanimation{
 	33%{  margin-top:-10px; }

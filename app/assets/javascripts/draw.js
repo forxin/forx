@@ -66,6 +66,30 @@ function draw()
 }
 
 $(document).ready(function(){
+	$(".circle").hover(
+  function(){
+    $(this).children().css("-webkit-animation-play-state", "paused");
+	$(this).parent().children().css("-webkit-animation-play-state", "paused");
+},
+  function(){
+    $(this).children().css("-webkit-animation-play-state", "running");
+	$(this).parent().children().css("-webkit-animation-play-state", "running");
+});
+	/*$(".repository").hover(function(){
+		var index = $(this).parent().parent().index();
+		$(this).filter(':not(:animated)').animate({ "width": +=25,"height":+=25 });
+		$(this).parent().addClass("display-percentage");
+		if (index % 2 == 1) {$(this).removeClass("moreupanimation")};
+		if (index % 2 == 0) {$(this).removeClass("upanimation")};
+		
+	}, function() {
+		var index = $(this).parent().parent().index();
+		$(this).filter(':not(:animated)').animate({ "width": -=25, "height": -=25 });
+		$(this).parent().removeClass("display-percentage");
+		if (index % 2 == 1) {$(this).addClass("moreupanimation")};
+		if (index % 2 == 0) {$(this).addClass("upanimation")};
+	});	*/
+	
 	$(".circle").click(function() {
 		var repo = $(this).data("repo");
 		window.open('https://github.com/' + repo, '_blank');

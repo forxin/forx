@@ -9,7 +9,7 @@
 
 		<div class = "circlecontent" style = "position:relative; cursor: pointer">
 			<div class="circle" data-repo="<%= repo.name %>">
-					
+					<div class="percentage"><%= repo.score.round %> %</div>
 					<div class="repository" data-score="<%= repo.score %>" user-avatar = "<%= repo.user_avatar %>">
 					
 					<%# Other properties available: %>
