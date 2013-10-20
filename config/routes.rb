@@ -1,5 +1,5 @@
 Forx::Application.routes.draw do
-  get ':username/:repo' => 'repos#index', as: 'repo'
+  get ':username/:repo' => 'repos#index', as: 'repo', :constraints => { username: /.*/, repo: /.*/ }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
