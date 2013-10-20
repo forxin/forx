@@ -3,20 +3,25 @@
     <p class="lead" style="margin-bottom: 10px;">We explored all the awesome forks around <a href="http://github.com/<%= @repositories.first.name %>"><%= @repositories.first.name %></a> on GitHub and found out <%= foo_pluralize(@repositories.count, "nothing particularly interesting, apparently there's not much going on here.", "only the very interesting ones, just for you! The larger the circle, the more important the fork.") %></p>
   </div>
 </div>
-<div class="row" style="background-color: lightGreen;">
-
-  <div style="position : relative;" id = "repocontainer">
-    <% @repositories.each do |repo| %>
-      <div class="repository" data-score="<%= repo.score %>" user-avatar = "<%= repo.user_avatar %>">
-        <p><%= repo.name %></p>
-        <%# Other properties available: %>
-        <%#  * repo.url %>
-        <%#  * repo.user_avatar %>
-        <%#  * repo.username %>
-  	   <div class = "shadow"></div>
-      </div>
-    <% end %>
-  </div>
+<div class="row" style="background-color: lightGreen; position:relative" >
+<% @repositories.each do |repo| %>
+	<div id = "repocontainer">
+		<div class = "circlecontent" style = "position:relative">
+			<div class="circle">
+				
+					<div class="repository" data-score="<%= repo.score %>" user-avatar = "<%= repo.user_avatar %>">
+					<%# Other properties available: %>
+					<%#  * repo.url %>
+					<%#  * repo.user_avatar %>
+					<%#  * repo.username %>
+					</div>
+				<div class = "shadow" style="position:relative"></div>
+			</div>
+		<div class ="repositoryname" style ="position:relative; font-size:12px; text-align:center"  ><%= repo.name %></div>
+	</div>
+	</div>
+<% end %>
+  
   <script> draw() </script>
 
 </div>

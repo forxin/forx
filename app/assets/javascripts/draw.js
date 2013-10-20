@@ -24,7 +24,7 @@ function draw()
 		}
 		
 		maxDistanse = maxRadius + radius[0] + 50;
-		
+		$('#rowcontainer').css({"height": (maxRadius * 2 + radius[0])*2 + 300 });
 		$('#repocontainer').css({"height": (maxRadius * 2 + radius[0])*2 + 140 });
 		centerX = maxDistanse + maxRadius;
 		centerY = maxDistanse + maxRadius;
@@ -41,7 +41,7 @@ function draw()
 			u = u + a;
 		}
 		
-		$('.content').each(function( index ) { 
+		$('.circlecontent').each(function( index ) { 
 		($(this).css( {"position":"absolute","left":x[index]-radius[index],"top":y[index]-radius[index]}))
 		});
 		
