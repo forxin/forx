@@ -16,18 +16,17 @@ function draw()
 		count = rating.length;
 		for (i=0; i < count; i++) {
 			radius[i] = Math.round(rating[i]);
-			if (radius[i]<30) { radius[i] = 40;}
+			if (radius[i]<40) { radius[i] = 40;}
 		}
 	
 		for (i=1; i<count; i++){
 			if (maxRadius < radius[i]) { maxRadius = radius[i]}
 		}
-		
-		maxDistanse = maxRadius + radius[0] + 50;
+				
+		maxDistanse = maxRadius + radius[0] + 60;
 		$('#repocontainer').css({"height": (maxRadius * 2 + radius[0])*2 + 140 });
 		centerX = $( '#repocontainer' ).width() / 2;
 		centerY = maxDistanse + maxRadius;
-		console.log(centerX);
 		x[0] = centerX;
 		y[0] = centerY;
 		
@@ -51,9 +50,12 @@ function draw()
 		$(this).css('background-image', 'url(' + imageUrl + ')');
 		if (index % 2 == 1) {$(this).addClass("moreupanimation")};
 		if (index % 2 == 0) {$(this).addClass("upanimation")};
-		/*if (index % 4 == 3) {$(this).addClass("rightanimation")};*/
 		});
 		
+		$('.shadow').each(function( index ) { 
+		if (index % 2 == 1) {$(this).addClass("shadowmoreupanimation")};
+		if (index % 2 == 0) {$(this).addClass("shadowupanimation")};
+		});
 		
 		$('.circle').each(function( index ) { 
 		($(this).css( {"height":radius[index]*2}))
