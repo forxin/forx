@@ -1,18 +1,34 @@
-<div style="position : relative; margin-top:15px" id = "repocontainer"> <!--container -->
-
-  <% @repositories.each do |repo| %>
-    <div class="repository" data-score="<%= repo.score %>" user-avatar = "<%= repo.user_avatar %>">
-      <p><%= repo.name %></p>
-      <%# Other properties available: %>
-      <%#  * repo.url %>
-      <%#  * repo.user_avatar %>
-      <%#  * repo.username %>
-	   <div class = "shadow"></div>
-	     
+<div class="row">
+  <div class="col-md-12">
+    <p class="lead" style="margin-bottom: 10px;">We explored all the awesome forks around <a href="http://github.com/<%= @repositories.first.name %>"><%= @repositories.first.name %></a> on GitHub and found out <%= foo_pluralize(@repositories.count, "nothing particularly interesting, apparently there's not much going on here.", "only the very interesting ones, just for you! The larger the circle, the more important the fork.") %></p>
   </div>
-	
-  <% end %>
 </div>
- <!-- /container -->
+<div class="row" style="background-color: lightGreen;">
 
-<script> draw() </script>
+  <div style="position : relative;" id = "repocontainer">
+    <% @repositories.each do |repo| %>
+      <div class="repository" data-score="<%= repo.score %>" user-avatar = "<%= repo.user_avatar %>">
+        <p><%= repo.name %></p>
+        <%# Other properties available: %>
+        <%#  * repo.url %>
+        <%#  * repo.user_avatar %>
+        <%#  * repo.username %>
+  	   <div class = "shadow"></div>
+      </div>
+    <% end %>
+  </div>
+  <script> draw() </script>
+
+</div>
+<div class="row" style="margin-top: 40px; margin-bottom: 20px;">
+  <div class="col-md-12">
+    <form role="form">
+      <div class="input-group">
+        <input class="form-control input-lg" type="text" placeholder="<user>/<repository>">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-primary btn-lg">Do that again.</button>
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
