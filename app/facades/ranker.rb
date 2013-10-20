@@ -2,16 +2,26 @@ class Ranker
   def self.rate_repos(*repositories)
     total = 0
 
-    repositories
-    .reject { |repo| repo.stargazers < 3 }
-    .each.map do |repo|
-      score = self.repo_score(repo.stargazers, days_since_now(repo.last_commit_on),
-                              days_since_now(repo.last_issue_closed_on))
+    repos = repositories
+            .each.map do |repo|
+              score = self.repo_score(repo.stargazers, days_since_now(repo.last_commit_on),
+                                      days_since_now(repo.last_issue_closed_on))
 
-      total += score
-      Repository.new(repo.name, repo.url, repo.user_avatar, repo.username, score)
-    end.each do |repo|
+              Repository.new(repo.name, repo.url, repo.user_avatar, repo.username, score, repo.important)
+            end.sort { |y, x| x.score <=> y.score }
+               .take(7)
+
+    total = repos.inject(0) { |total, repo| total + repo.score }
+    repos.each do |repo|
       repo.score = (repo.score / total) * 100
+    end.sort do |x, y|
+      if x.important
+        -1
+      elsif y.important
+        1
+      else
+        0
+      end
     end
   end
 
