@@ -19,23 +19,16 @@
 	animation : shadowmoreupanimation 4s linear infinite;
 }
 
-.mainrepository{
-	position: absolute;
-	left : 50%;
-	top : 50%;
-}
-
 .repository{
 	-webkit-border-radius: 999px;
     -moz-border-radius: 999px;
     border-radius: 999px; 
-		
+	background-color:#CCC;	
 	transition: padding .3s, bottom .3s;
 	background-position:center;
 	background-size:100% 100%;
 }
-.shadowanimation
-{
+.shadowanimation{
 	-webkit-animation: shadowanimation 2s linear infinite;
 	-moz-animation: shadowanimation 2s linear infinite;
 	animation : shadowanimation 2s linear infinite;
