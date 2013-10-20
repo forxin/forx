@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+
+.text-muted {
+    color: #888a85;
+    /*color: #555753;*/
+}
+
+h1 {
+    color: #eeeeec;
+}

@@ -23,7 +23,7 @@
 	-webkit-border-radius: 999px;
     -moz-border-radius: 999px;
     border-radius: 999px; 
-	background-color:#CCC;	
+	background-color: white;
 	transition: padding .3s, bottom .3s;
 	background-position:center;
 	background-size:100% 100%;
