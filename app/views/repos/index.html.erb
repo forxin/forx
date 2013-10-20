@@ -3,7 +3,7 @@
     <p class="lead" style="margin-bottom: 10px;">We explored all the awesome forks around <a href="http://github.com/<%= @repositories.first.name %>"><%= @repositories.first.name %></a> on GitHub and found out <%= foo_pluralize(@repositories.count, "nothing particularly interesting, apparently there's not much going on here.", "only the very interesting ones, just for you! The larger the circle, the more important the fork.") %></p>
   </div>
 </div>
-<div class="row" style="background-color: lightGreen; position:relative" >
+<div class="row" style="position:relative" >
 <div id = "repocontainer">
 <% @repositories.each do |repo| %>
 	

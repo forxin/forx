@@ -42,22 +42,18 @@ function draw()
 		}
 		
 		$('.circlecontent').each(function( index ) { 
-		($(this).css( {"position":"absolute","left":x[index]-radius[index],"top":y[index]-radius[index]}))
+		($(this).css( {"position":"absolute","left":x[index]-radius[index],"top":y[index]-radius[index],"width":radius[index]*2}))
 		});
 		
 		$('.repository').each(function( index ) { 
 		var imageUrl = ($(this).attr('user-avatar'));
 		($(this).css( {"position": "absolute","width":radius[index]*2 ,"height":radius[index]*2}))
 		$(this).css('background-image', 'url(' + imageUrl + ')');
-		$(this).addClass("upanimation"); 
-		/*if (index % 4 == 1) {$(this).addClass("downanimation")};
-		/*if (index % 4 == 2) {$(this).addClass("leftanimation")};
-		if (index % 4 == 3) {$(this).addClass("rightanimation")};*/
+		if (index % 2 == 1) {$(this).addClass("moreupanimation")};
+		if (index % 2 == 0) {$(this).addClass("upanimation")};
+		/*if (index % 4 == 3) {$(this).addClass("rightanimation")};*/
 		});
 		
-		$('.shadow').each(function( index ) { 
-		($(this).css( {"width":radius[index]*2 + 10}))
-		});
 		
 		$('.circle').each(function( index ) { 
 		($(this).css( {"height":radius[index]*2}))
