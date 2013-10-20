@@ -63,3 +63,10 @@ function draw()
 		
 	})
 }
+
+$(document).ready(function() {
+	$(".circle").click(function() {
+		var repo = $(this).data("repo");
+		window.open('https://github.com/' + repo, '_blank');
+	});
+});
