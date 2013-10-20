@@ -5,9 +5,18 @@
 	position:absolute;
 	border-radius: 100%;
 	margin-left: 13%;
-	-webkit-animation: shadowanimation 2s linear infinite;
-	-moz-animation: shadowanimation 2s linear infinite;
-	animation : shadowanimation 2s linear infinite;
+}
+
+.shadowupanimation{
+	-webkit-animation: shadowupanimation 2s linear infinite;
+	-moz-animation: shadowupanimation 2s linear infinite;
+	animation : shadowupanimation 2s linear infinite;
+}
+
+.shadowmoreupanimation{
+	-webkit-animation: shadowmoreupanimation 4s linear infinite;
+	-moz-animation: shadowmoreupanimation 4s linear infinite;
+	animation : shadowmoreupanimation 4s linear infinite;
 }
 
 .mainrepository{
@@ -76,13 +85,23 @@
 	66%{ margin-top:0px; }
 }
 
-@-webkit-keyframes shadowanimation { 
+@-webkit-keyframes shadowupanimation { 
 	33%{ width:70%; margin-left:18% } 
 	66%{ width: 80%; margin-left:13% } 
 }
 
-@keyframes shadowanimation {
+@keyframes shadowupanimation {
 	33%{ width:70%; margin-left:18%}
+	66%{ width:80%; margin-left:13%}
+}
+
+@-webkit-keyframes shadowmoreupanimation { 
+	33%{ width:60%; margin-left:23% } 
+	66%{ width: 80%; margin-left:13% } 
+}
+
+@keyframes shadowmoreupanimation {
+	33%{ width:60%; margin-left:23%}
 	66%{ width:80%; margin-left:13%}
 }
 .circlecontent:nth-child(5n+0) .repository{

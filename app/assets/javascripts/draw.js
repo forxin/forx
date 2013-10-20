@@ -51,9 +51,12 @@ function draw()
 		$(this).css('background-image', 'url(' + imageUrl + ')');
 		if (index % 2 == 1) {$(this).addClass("moreupanimation")};
 		if (index % 2 == 0) {$(this).addClass("upanimation")};
-		/*if (index % 4 == 3) {$(this).addClass("rightanimation")};*/
 		});
 		
+		$('.shadow').each(function( index ) { 
+		if (index % 2 == 1) {$(this).addClass("shadowmoreupanimation")};
+		if (index % 2 == 0) {$(this).addClass("shadowupanimation")};
+		});
 		
 		$('.circle').each(function( index ) { 
 		($(this).css( {"height":radius[index]*2}))
