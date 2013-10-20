@@ -13,8 +13,8 @@ module ApplicationHelper
     case flash_type
     when :success
       "alert-success"
-    when :error
-      "alert-error"
+    when :danger
+      "alert-danger"
     when :alert
       "alert-warning"
     when :notice
