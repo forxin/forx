@@ -8,58 +8,49 @@
 }
 
 .shadowupanimation{
-	-webkit-animation: shadowupanimation 2s linear infinite;
-	-moz-animation: shadowupanimation 2s linear infinite;
-	animation : shadowupanimation 2s linear infinite;
+	-webkit-animation: shadowupanimation 2s ease-in-out infinite;
+	-moz-animation: shadowupanimation 2s ease-in-out infinite;
+	animation : shadowupanimation 2s ease-in-out infinite;
 }
 
 .shadowmoreupanimation{
-	-webkit-animation: shadowmoreupanimation 4s linear infinite;
-	-moz-animation: shadowmoreupanimation 4s linear infinite;
-	animation : shadowmoreupanimation 4s linear infinite;
+	-webkit-animation: shadowmoreupanimation 4s ease-in-out infinite;
+	-moz-animation: shadowmoreupanimation 4s ease-in-out infinite;
+	animation : shadowmoreupanimation 4s ease-in-out infinite;
 }
+
 
 .repository{
 	-webkit-border-radius: 999px;
     -moz-border-radius: 999px;
-    border-radius: 999px; 
+    border-radius: 999px;
 	background-color: white;
-	transition: padding .3s, bottom .3s;
 	background-position:center;
 	background-size:100% 100%;
-}
-.shadowanimation{
-	-webkit-animation: shadowanimation 2s linear infinite;
-	-moz-animation: shadowanimation 2s linear infinite;
-	animation : shadowanimation 2s linear infinite;
+	cursor:pointer;
+	z-index: 99998;
 }
 
 .upanimation{
-	-webkit-animation: upanimation 2s linear infinite;
-	-moz-animation: upanimation 2s linear infinite;
-	animation : upanimation 2s linear infinite;
-	
-	-webkit-transform-origin: center bottom;
-	-moz-transform-origin: center bottom;
-	transform-origin:center bottom;
-	
-	transition: padding .3s, bottom .3s;
+	-webkit-animation: upanimation 2s ease-in-out infinite;
+	-moz-animation: upanimation 2s ease-in-out infinite;
+	animation : upanimation 2s ease-in-out infinite;
 }
 
 .moreupanimation{
-	-webkit-animation: moreupanimation 4s linear infinite;
-	-moz-animation: moreupanimation 4s linear infinite;
-	animation : moreupanimation 4s linear infinite;
-	
-	-webkit-transform-origin: center bottom;
-	-moz-transform-origin: center bottom;
-	transform-origin:center bottom;
-	
-	transition: padding .3s, bottom .3s;
+	-webkit-animation: moreupanimation 4s ease-in-out infinite;
+	-moz-animation: moreupanimation 4s ease-in-out infinite;
+	animation : moreupanimation 4s ease-in-out infinite;
+}
+
+.blur{
+	-webkit-filter:blur(2px);
+	-o-filter:blur(2px);
+	filter:blur(2px);
 }
 
 @-webkit-keyframes moreupanimation{
-	33%{  margin-top:-10px; } 
+	33%{  margin-top:-10px; }
 	66%{ margin-top:0px;}
 }
 
@@ -69,7 +60,7 @@
 }
 
 @-webkit-keyframes upanimation{
-	33%{  margin-top:-5px; } 
+	33%{  margin-top:-5px; }
 	66%{ margin-top:0px;}
 }
 
@@ -78,9 +69,9 @@
 	66%{ margin-top:0px; }
 }
 
-@-webkit-keyframes shadowupanimation { 
-	33%{ width:70%; margin-left:18% } 
-	66%{ width: 80%; margin-left:13% } 
+@-webkit-keyframes shadowupanimation {
+	33%{ width:70%; margin-left:18% }
+	66%{ width: 80%; margin-left:13% }
 }
 
 @keyframes shadowupanimation {
@@ -88,9 +79,9 @@
 	66%{ width:80%; margin-left:13%}
 }
 
-@-webkit-keyframes shadowmoreupanimation { 
-	33%{ width:60%; margin-left:23% } 
-	66%{ width: 80%; margin-left:13% } 
+@-webkit-keyframes shadowmoreupanimation {
+	33%{ width:60%; margin-left:23% }
+	66%{ width: 80%; margin-left:13% }
 }
 
 @keyframes shadowmoreupanimation {
