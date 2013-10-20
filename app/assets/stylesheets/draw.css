@@ -3,12 +3,12 @@
 	background: rgba(0,0,0,.1);
 	position:absolute;
 	border-radius: 100%;
-	margin: -15px 0 0 30%;
-	transition: .3s;
-	bottom:0;
 }
+
 .mainrepository{
-	
+	position: absolute;
+	left : 50%;
+	top : 50%;
 }
 
 .repository{

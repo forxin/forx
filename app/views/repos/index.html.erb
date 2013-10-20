@@ -1,14 +1,17 @@
 <div style="position : relative; margin-top:15px" id = "repocontainer"> <!--container -->
 
   <% @repositories.each do |repo| %>
-    <div class="repository" data-score="<%= repo.score %>" user-avatar = "<%= repo.user_avatar %>">
-      <p><%= repo.name %></p>
-      <%# Other properties available: %>
-      <%#  * repo.url %>
-      <%#  * repo.user_avatar %>
-      <%#  * repo.username %>
-	   <div class = "shadow"></div>
-	     
+  <div class = "content" style = "position:relative">
+	<div class="circle">
+		<div class="repository" data-score="<%= repo.score %>" user-avatar = "<%= repo.user_avatar %>">
+		<%# Other properties available: %>
+		<%#  * repo.url %>
+		<%#  * repo.user_avatar %>
+		<%#  * repo.username %>
+		</div>
+		<div class = "shadow" style="position:relative"></div>
+	</div>
+	  <div class ="repositoryname" style ="position:relative; font-size:12px; text-align:center"  ><%= repo.name %></div>
   </div>
 	
   <% end %>
