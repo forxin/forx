@@ -24,12 +24,12 @@ function draw()
 		}
 		
 		maxDistanse = maxRadius + radius[0] + 50;
-		
 		$('#repocontainer').css({"height": (maxRadius * 2 + radius[0])*2 + 140 });
-		centerX = maxDistanse + maxRadius;
+		centerX = $( '#repocontainer' ).width() / 2;
 		centerY = maxDistanse + maxRadius;
-		x[0] = maxDistanse + maxRadius;
-		y[0] = maxDistanse + maxRadius;
+		console.log(centerX);
+		x[0] = centerX;
+		y[0] = centerY;
 		
 		u = Math.PI;
 		a = Math.PI * 2 / (count - 1);
@@ -41,22 +41,26 @@ function draw()
 			u = u + a;
 		}
 		
-		$('.content').each(function( index ) { 
+		$('.circlecontent').each(function( index ) { 
 		($(this).css( {"position":"absolute","left":x[index]-radius[index],"top":y[index]-radius[index]}))
 		});
 		
 		$('.repository').each(function( index ) { 
 		var imageUrl = ($(this).attr('user-avatar'));
-		($(this).css( {"width":radius[index]*2 ,"height":radius[index]*2}))
+		($(this).css( {"position": "absolute","width":radius[index]*2 ,"height":radius[index]*2}))
 		$(this).css('background-image', 'url(' + imageUrl + ')');
-		/*if (index % 4 == 0) {$(this).addClass("upanimation")}; 
-		if (index % 4 == 1) {$(this).addClass("downanimation")};
-		if (index % 4 == 2) {$(this).addClass("leftanimation")};
+		if (index % 4 == 0) {$(this).addClass("upanimation")}; 
+		/*if (index % 4 == 1) {$(this).addClass("downanimation")};
+		/*if (index % 4 == 2) {$(this).addClass("leftanimation")};
 		if (index % 4 == 3) {$(this).addClass("rightanimation")};*/
 		});
 		
 		$('.shadow').each(function( index ) { 
-		($(this).css( {"width":radius[index]*2}))
+		($(this).css( {"width":radius[index]*2 + 10}))
+		});
+		
+		$('.circle').each(function( index ) { 
+		($(this).css( {"height":radius[index]*2}))
 		});
 		
 	})
