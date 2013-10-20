@@ -49,7 +49,7 @@ function draw()
 		var imageUrl = ($(this).attr('user-avatar'));
 		($(this).css( {"position": "absolute","width":radius[index]*2 ,"height":radius[index]*2}))
 		$(this).css('background-image', 'url(' + imageUrl + ')');
-		if (index % 4 == 0) {$(this).addClass("upanimation")}; 
+		$(this).addClass("upanimation"); 
 		/*if (index % 4 == 1) {$(this).addClass("downanimation")};
 		/*if (index % 4 == 2) {$(this).addClass("leftanimation")};
 		if (index % 4 == 3) {$(this).addClass("rightanimation")};*/

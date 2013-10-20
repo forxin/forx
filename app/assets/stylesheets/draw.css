@@ -58,12 +58,12 @@
 }
 
 @-webkit-keyframes upanimation{
-	33%{  margin-top:-5px; } 
+	33%{  margin-top:-7px; } 
 	66%{ margin-top:0px;}
 }
 
 @keyframes upanimation {
-	33%{ margin-top:-5px;}
+	33%{ margin-top:-7px;}
 	66%{ margin-top:0px; }
 }
 
@@ -77,12 +77,26 @@
 	66%{ transform:rotate(-10deg); }
 }
 
-.repository:nth-child(5n+0) {
-	-webkit-animation-delay:0s;
+.circlecontent:nth-child(5n+0) .repository{
+	-webkit-animation-delay:100ms;
+	animation-delay:1s;
 }
 
-.circlecontent:nth-child(5) repository{
+.circlecontent:nth-child(5n+1) .repository{
 	-webkit-animation-delay:1s;
+	animation-delay:1s;
+}
+
+.circlecontent:nth-child(5n+2) .repository{
+	-webkit-animation-delay:500ms;
+	animation-delay:1s;
+}
+.circlecontent:nth-child(5n+3) .repository{
+	-webkit-animation-delay:0s;
+	animation-delay:1s;
+}
+.circlecontent:nth-child(5n+4) .repository{
+	-webkit-animation-delay:1700ms;
 	animation-delay:1s;
 }
 
