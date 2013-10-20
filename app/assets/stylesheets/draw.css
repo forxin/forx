@@ -6,23 +6,25 @@
 	border-radius: 100%;
 	margin-left: 13%;
 }
-/*.repository:hover{
-	-webkit-animation-play-state: paused;
-	animation-play-state:paused;
-}*/
 
 .shadowupanimation{
-	-webkit-animation: shadowupanimation 2s ease-in-out infinite;
-	-moz-animation: shadowupanimation 2s ease-in-out infinite;
-	animation : shadowupanimation 2s ease-in-out infinite;
+	-webkit-animation: shadowupanimation 2s linear infinite;
+	-moz-animation: shadowupanimation 2s linear infinite;
+	animation : shadowupanimation 2s linear infinite;
 }
 
 .shadowmoreupanimation{
-	-webkit-animation: shadowmoreupanimation 4s ease-in-out infinite;
-	-moz-animation: shadowmoreupanimation 4s ease-in-out infinite;
-	animation : shadowmoreupanimation 4s ease-in-out infinite;
+	-webkit-animation: shadowmoreupanimation 4s linear infinite;
+	-moz-animation: shadowmoreupanimation 4s linear infinite;
+	animation : shadowmoreupanimation 4s linear infinite;
 }
 
+.repository:hover{
+	-webkit-transform:scale(1.025);
+    -moz-transform:scale(1.025);
+    -o-transform:scale(1.025);
+    transform:scale(1.025);
+}
 
 .repository{
 	-webkit-border-radius: 999px;
@@ -33,18 +35,24 @@
 	background-size:100% 100%;
 	cursor:pointer;
 	z-index: 99998;
+	
+	-webkit-transition:  -webkit-transform .2s ease-out;
+    -moz-transition: -moz-transform .2s ease-out;
+    -o-transition: -o-transform .2s ease-out;
+    -ms-transition: -ms-transform .2s ease-out; 
+    transition: transform .2s ease-out; 
 }
 
 .upanimation{
-	-webkit-animation: upanimation 2s ease-in-out infinite;
-	-moz-animation: upanimation 2s ease-in-out infinite;
-	animation : upanimation 2s ease-in-out infinite;
+	-webkit-animation: upanimation 2s linear infinite;
+	-moz-animation: upanimation 2s linear infinite;
+	animation : upanimation 2s linear infinite;
 }
 
 .moreupanimation{
-	-webkit-animation: moreupanimation 4s ease-in-out infinite;
-	-moz-animation: moreupanimation 4s ease-in-out infinite;
-	animation : moreupanimation 4s ease-in-out infinite;
+	-webkit-animation: moreupanimation 4s linear infinite;
+	-moz-animation: moreupanimation 4s linear infinite;
+	animation : moreupanimation 4s linear infinite;
 }
 	
 .circle .percentage {
@@ -53,7 +61,7 @@
 .circle.display-percentage .percentage {
 	display: block;
 	z-index: 99998;
-	font-size:xx-large;
+	font-size:normal;
 }
 
 
