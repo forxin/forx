@@ -10,14 +10,7 @@
 </div>
 <div class="row" style="margin-bottom: 5px;">
   <div class="col-md-12">
-    <form role="form">
-      <div class="input-group">
-        <input class="form-control input-lg" type="text" placeholder="<user>/<repository>">
-        <span class="input-group-btn">
-          <button type="submit" class="btn btn-primary btn-lg">Go for it!</button>
-        </span>
-      </div>
-    </form>
+    <%= render partial: 'search_form', :locals => {:button_text => "Go for it!"} %>
   </div>
 </div>
 <div class="row" style="padding-left: 10px;">
@@ -25,6 +18,8 @@
     <p data-typer-targets='{
       "targets" : [
         "⤴ How about &#39;pktck/ParsePy&#39;, for example…",
+        "⤴ How about &#39;kohsuke/hudson&#39;, for example…",
+        "⤴ How about &#39;heroku/heroku-push&#39;, for example…",
         "⤴ How about &#39;escoz/QuickDialog&#39;, for example…"
       ]
     }' class="lead">⤴ How about &#39;escoz/QuickDialog&#39;, for example…</p>

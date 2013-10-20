@@ -1,0 +1,8 @@
+<%= form_tag search_url, role: 'form' do %>
+  <div class="input-group">
+    <input name="repo" class="form-control input-lg" type="text" placeholder="<user>/<repository>">
+    <span class="input-group-btn">
+      <button type="submit" class="btn btn-primary btn-lg"><%= button_text %></button>
+    </span>
+  </div>
+<% end %>
