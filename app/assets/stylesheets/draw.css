@@ -23,8 +23,8 @@
 .repository{
 	-webkit-border-radius: 999px;
     -moz-border-radius: 999px;
-    border-radius: 999px; 
-	background-color:#CCC;	
+    border-radius: 999px;
+	background-color: white;
 	background-position:center;
 	background-size:100% 100%;
 	cursor:pointer;
@@ -44,7 +44,7 @@
 }
 
 @-webkit-keyframes moreupanimation{
-	33%{  margin-top:-10px; } 
+	33%{  margin-top:-10px; }
 	66%{ margin-top:0px;}
 }
 
@@ -54,7 +54,7 @@
 }
 
 @-webkit-keyframes upanimation{
-	33%{  margin-top:-5px; } 
+	33%{  margin-top:-5px; }
 	66%{ margin-top:0px;}
 }
 
@@ -63,9 +63,9 @@
 	66%{ margin-top:0px; }
 }
 
-@-webkit-keyframes shadowupanimation { 
-	33%{ width:70%; margin-left:18% } 
-	66%{ width: 80%; margin-left:13% } 
+@-webkit-keyframes shadowupanimation {
+	33%{ width:70%; margin-left:18% }
+	66%{ width: 80%; margin-left:13% }
 }
 
 @keyframes shadowupanimation {
@@ -73,9 +73,9 @@
 	66%{ width:80%; margin-left:13%}
 }
 
-@-webkit-keyframes shadowmoreupanimation { 
-	33%{ width:60%; margin-left:23% } 
-	66%{ width: 80%; margin-left:13% } 
+@-webkit-keyframes shadowmoreupanimation {
+	33%{ width:60%; margin-left:23% }
+	66%{ width: 80%; margin-left:13% }
 }
 
 @keyframes shadowmoreupanimation {
