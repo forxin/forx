@@ -32,7 +32,11 @@
       <!-- Begin page content -->
       <div class="container">
         <div class="page-header" style="margin-top: 80px;">
-          <h1><a style="text-decoration: none; color: inherit;" href="/">forx</a></h1>
+          <% if params[:controller] == "welcome" %>
+            <h1 class="animated tada"><a style="text-decoration: none; color: inherit;" href="/">forx</a></h1>
+          <% else %>
+            <h1><a style="text-decoration: none; color: inherit;" href="/">forx</a></h1>
+          <% end %>
         </div>
 
         <div class="page-content">
