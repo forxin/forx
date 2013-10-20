@@ -6,25 +6,27 @@
 <div class="row" style="position:relative" >
 <div id = "repocontainer">
 <% @repositories.each do |repo| %>
-	
+
 		<div class = "circlecontent" style = "position:relative">
 			<div class="circle">
-				
+
 					<div class="repository" data-score="<%= repo.score %>" user-avatar = "<%= repo.user_avatar %>">
 					<%# Other properties available: %>
 					<%#  * repo.url %>
 					<%#  * repo.user_avatar %>
 					<%#  * repo.username %>
 					</div>
-				
+
 			</div>
 			<div class = "shadow" style="position:relative"></div>
-		<div class ="repositoryname" style ="position:relative; font-size:12px; text-align:center"  ><%= repo.name %></div>
+		<div class ="repositoryname" style ="position:relative; font-size:12px; text-align:center">
+      <a href="https://github.com/<%= repo.name %>" target="_blank"><%= repo.name %></a>
+    </div>
 	</div>
-	
+
 <% end %>
 </div>
-  
+
   <script> draw() </script>
 
 </div>
