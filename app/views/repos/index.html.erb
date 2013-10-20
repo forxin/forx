@@ -4,8 +4,9 @@
   </div>
 </div>
 <div class="row" style="background-color: lightGreen; position:relative" >
+<div id = "repocontainer">
 <% @repositories.each do |repo| %>
-	<div id = "repocontainer">
+	
 		<div class = "circlecontent" style = "position:relative">
 			<div class="circle">
 				
@@ -19,8 +20,9 @@
 			</div>
 		<div class ="repositoryname" style ="position:relative; font-size:12px; text-align:center"  ><%= repo.name %></div>
 	</div>
-	</div>
+	
 <% end %>
+</div>
   
   <script> draw() </script>
 

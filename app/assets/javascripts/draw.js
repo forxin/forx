@@ -24,12 +24,12 @@ function draw()
 		}
 		
 		maxDistanse = maxRadius + radius[0] + 50;
-		$('#rowcontainer').css({"height": (maxRadius * 2 + radius[0])*2 + 300 });
 		$('#repocontainer').css({"height": (maxRadius * 2 + radius[0])*2 + 140 });
-		centerX = maxDistanse + maxRadius;
+		centerX = $( '#repocontainer' ).width() / 2;
 		centerY = maxDistanse + maxRadius;
-		x[0] = maxDistanse + maxRadius;
-		y[0] = maxDistanse + maxRadius;
+		console.log(centerX);
+		x[0] = centerX;
+		y[0] = centerY;
 		
 		u = Math.PI;
 		a = Math.PI * 2 / (count - 1);
