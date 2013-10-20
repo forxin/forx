@@ -5,10 +5,10 @@ describe Ranker do
     # Factories?
     old_repo = GithubRepo.new('Repo 1', 'http://www.example.com', 'avatar1',
       'user1', old_repo_options[:stars], old_repo_options[:last_commit_on],
-      old_repo_options[:last_issue_closed_on])
+      old_repo_options[:last_issue_closed_on], nil, true)
     hot_repo = GithubRepo.new('Repo 2', 'http://www.example.com', 'avatar2',
       'user2', new_repo_options[:stars], new_repo_options[:last_commit_on],
-      new_repo_options[:last_issue_closed_on])
+      new_repo_options[:last_issue_closed_on], nil, false)
 
       repo1, repo2 = Ranker.rate_repos(old_repo, hot_repo)
 
