@@ -9,6 +9,6 @@ class ReposController < ApplicationController
 
   private
   def repo_not_found
-    redirect_to root_url, flash: { danger: "We didn't find a repository with that name out there :(" }
+    redirect_to root_url, flash: { danger: "No public repository is found. Maybe a typo? Try again." }
   end
 end
